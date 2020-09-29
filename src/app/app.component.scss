@@ -1,0 +1,46 @@
+::ng-deep .darkmode-toggle {
+  z-index: 500;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  outline: none;
+  -webkit-appearance: none;
+  background-color: #ebebeb;
+  transition: .5s;
+  border-radius: 20px;
+}
+
+input:checked[type="checkbox"] {
+  background-color: #000000;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]::before {
+  content: '☀️';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  /* transform: scale(1.1); */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transition: 0.5s;
+}
+
+input:checked[type="checkbox"]::before {
+  left: 20px;
+  content: '🌜';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #555555;
+}
